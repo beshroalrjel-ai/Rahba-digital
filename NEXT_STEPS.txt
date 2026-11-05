@@ -1,0 +1,1 @@
+Next: finish the personal sheep management interface and connect Supabase using the project's publishable key.
