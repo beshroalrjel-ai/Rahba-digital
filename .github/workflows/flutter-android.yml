@@ -31,6 +31,9 @@ jobs:
       - name: Generate Android platform files
         run: flutter create . --platforms=android --org ly.rahba.digital --project-name rahba_digital
 
+      - name: Restore checked-in test sources
+        run: git checkout -- test/widget_test.dart
+
       - name: Install packages
         run: flutter pub get
 
