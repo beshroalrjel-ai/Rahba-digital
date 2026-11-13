@@ -18,7 +18,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
     url: supabaseUrl,
-    anonKey: supabasePublishableKey,
+    publishableKey: supabasePublishableKey,
   );
   runApp(const RahbaApp());
 }
@@ -1006,7 +1006,7 @@ class _AddSheepSheetState extends State<AddSheepSheet> {
               ),
               const SizedBox(height: 10),
               DropdownButtonFormField<String>(
-                value: _sex,
+                initialValue: _sex,
                 decoration: const InputDecoration(labelText: 'الجنس'),
                 items: const [
                   DropdownMenuItem(value: 'male', child: Text('ذكر')),
@@ -1019,7 +1019,7 @@ class _AddSheepSheetState extends State<AddSheepSheet> {
               ),
               const SizedBox(height: 10),
               DropdownButtonFormField<String>(
-                value: _category,
+                initialValue: _category,
                 decoration: const InputDecoration(labelText: 'التصنيف'),
                 items: const [
                   DropdownMenuItem(value: 'lamb', child: Text('مولود')),
